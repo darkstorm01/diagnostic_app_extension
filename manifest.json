@@ -12,5 +12,8 @@
     "system.memory",
     "system.storage",
     "system.display"
-  ]
+  ],
+  "externally_connectable": {
+    "matches": ["http://localhost:3000/*"]
+  }
 }

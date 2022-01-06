@@ -1,10 +1,8 @@
-let color = "#3aa757";
-
 /*chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ color });
   console.log("Default background color set to %cgreen", `color: ${color}`);
 });*/
-function getdetails() {
+/*function getdetails() {
   chrome.system.memory.getInfo((a) => {
     console.log(a);
   });
@@ -23,4 +21,12 @@ function getdetails() {
 }
 
 getdetails();
-setInterval(getdetails, 30000);
+setInterval(getdetails, 30000);*/
+chrome.runtime.onMessageExternal.addListener(function (
+  request,
+  sender,
+  sendResponse
+) {
+  console.log(request);
+  sendResponse("Hi");
+});
